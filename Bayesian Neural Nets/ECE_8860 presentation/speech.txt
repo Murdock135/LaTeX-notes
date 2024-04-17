@@ -1,0 +1,16 @@
+Intro:
+
+I'm Qazi. People know me as Zayan. I just started working with Dr Anderson in the general area of XAI. Right now, I'm trying to use Neural Gas to do population
+density estimation and finally, someday in the near future somehow approximate a NN using a FIS. Neural Gas is a hebbian learning technique and I'm not sure yet what kind of work has been done to expoit its stochastic elements. I tried and I thought a lot about it but at this point it's a bit too challenging (laugh). So I'm presenting something else today. Bayesian Neural Networks. The reason I chose this is that- I'm currently taking Neural Nets and I'd heard of Bayesian Neural Nets and Bayesian Belief nets and so on before and it just seemed like an obvious bridge between Neural Nets and probability theory.And I suppose anyone who's been exposed to probability distributions would ask- Why think of the weights are singleton scalar values? Why initialize them to all one's or some arbitrary value? Surely we can somehow attach a probability distribution over a weight? And that's what Radford Neil did in his PhD thesis back in 1995. There were some discussion around a Bayesian Probability Network, so to speak but as far as I understand right now, Radford Neil is thought to be the pioneer.
+
+Let's dive in. I think this is going to be pretty simple for some of you who've been researching AI for a while but hopefully I have something to offer from this presentation.
+
+Anyway, let's look at what they are.
+
+Slide 2:
+
+This picture I think captures the essence of BNNs. On the left there's an MLP with scalar values for the weights and a predetermined activation function on
+every neuron everyone here knows that. figure b and c are BNNs and basically the weights, biases and activation functions can all be cast as samples from a distribution. 
+
+Slide 3: 
+
