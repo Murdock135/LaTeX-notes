@@ -34,12 +34,22 @@
     \label{fig: rnn}
 \end{figure}
 
-In this document, we shall derive gradient of the loss of RNN
+This document is meant to be treated as supplementary to \cite{d2l_bptt} and assumes that the reader
+understands the working principle of an RNN. If the reader requires such understanding, we recommend
+reading the cited work first and only then reading this document. The aim of this document
+is thus not to provide explanation on the RNN but rather to focus on one mathematical aspect
+the cited work has failed to explain with sufficient readability and that is- The gradient of the loss of RNN
 w.r.t. the \textit{hidden weights} $W_{hh}$. In truth, we shall
-derive the gradient aka differentiate the \textbf{loss at a particular
-time instant wrt \textit{the concatenated weight matrix $[W_{xh}\;W_{hh}]^T$}}
-This concatenation does not make any difference from a computational
-perspective. \cite{d2l_bptt, murat_bptt}.
+derive the gradient aka differentiate the loss at a particular
+time instant wrt \textit{the concatenated weight matrix $[W_{xh}\;W_{hh}]^T$}
+and ultimately obtain an equation for a particularly elusive-to-understand term in
+the gradient (there are 3 terms in the gradient, this is one of them), the $\frac{\partial h_t}{\partial w_h}$
+The concatenation of $W_{xh}$ and $W_{hh}$ does not make any difference from a computational
+perspective. \cite{d2l_bptt, murat_bptt} and so, we shall denote it as $w_h$. Lastly, no distinction is 
+made in terms of notation for vectors, scalars or matrices. This simplifies the derivation process however,
+we shall produce a work in the future that incorporates vector-matrix notation.
+
+\textbf{Let's start} 
 
 The emprical loss of the neural network is,
 
@@ -75,7 +85,8 @@ Thus, by the multivariable chain rule,
 If $h_t = f_1(h_{t-1}, w_h), h_{t-1}= g_1(h_{t-2}, w_h), w_h = h_1(w_h)$ \footnote{(Note: $h_1$ (the function, \textit{not} the hidden state) is merely the identity
 function. We've formulated it so just to be consistent with the
 formulation of "case 1" in \cite{multivariate_chain_rule}. Eqn \ref{eq: h_t wrt wh} would still 
-be valid even if we hadn't defined it as a separate function.}
+be valid even if we hadn't defined it as a separate function.} (Read as "The function $f_1$ takes 
+$h_{t-1}$ and $w_h$ as input, $g_1$ takes $h_{t-2}$ and $w_h$ as input and $h_1$ takes $w_h$ as input.)
 
 \begin{equation}
     \frac{\partial h_t}{\partial w_h} = \frac{\partial f_1}{\partial w_h} + \frac{\partial f_1}{\partial h_{t-1}}\frac{\partial h_{t-1}}{\partial w_h}
@@ -86,6 +97,7 @@ Similarly, if $h_{t-1} = f_2(h_{t-2}, w_h), h_{t-2}= g_2(h_{t-3}, w_h), w_h = h_
 
 \begin{equation}
     \frac{\partial h_{t-1}}{\partial w_h} = \frac{\partial f_2}{\partial w_h} + \frac{\partial f_2}{\partial h_{t-2}}\frac{\partial h_{t-2}}{\partial w_h}
+    \label{eq: h_t-1 wrt wh}
 \end{equation}
 
 Similarly, if $h_{t-2} = f_3(h_{t-3}, w_h), h_{t-3}= g_3(h_{t-4}, w_h), w_h = h_3(w_h)$
@@ -97,33 +109,34 @@ Similarly, if $h_{t-2} = f_3(h_{t-3}, w_h), h_{t-3}= g_3(h_{t-4}, w_h), w_h = h_
 
 We can find similar expressions for time steps further back $h_{t-3}, h_{t-4}$ all the way to $h_1$.
 
-Thus, eqn \ref{eq: h_t wrt wh} becomes, 
+Now, from equation \ref{eq: h_t wrt wh} and equation \ref{eq: h_t-1 wrt wh}, 
 
 \begin{align}
     \frac{\partial h_t}{\partial w_h} &= \frac{\partial f_1}{\partial w_h} + \frac{\partial f_1}{\partial h_{t-1}}(\frac{\partial f_2}{\partial w_h} + \frac{\partial f_2}{\partial h_{t-2}}\frac{\partial h_{t-2}}{\partial w_h}) && (\text{we won't expand $\frac{\partial h_{t-2}}{\partial w_h}$}) \\
                                       &= \frac{\partial f_1}{\partial w_h} + \frac{\partial f_1}{\partial h_{t-1}}\frac{\partial f_2}{\partial w_h} + \frac{\partial f_1}{\partial h_{t-1}}\frac{\partial f_2}{\partial h_{t-2}}\frac{\partial h_{t-2}}{\partial w_h} \\
-                                      &= \frac{\partial h_t}{\partial w_h} + \frac{\partial h_t}{\partial h_{t-1}}\frac{\partial h_{t-1}}{\partial w_h} + \frac{\partial h_t}{\partial h_{t-1}}\frac{\partial h_{t-1}}{\partial h_{t-2}}\frac{\partial h_{t-2}}{\partial w_h}
+                                      &= \frac{\partial h_t}{\partial w_h} + \frac{\partial h_t}{\partial h_{t-1}}\frac{\partial h_{t-1}}{\partial w_h} + \frac{\partial h_t}{\partial h_{t-1}}\frac{\partial h_{t-1}}{\partial h_{t-2}}\frac{\partial h_{t-2}}{\partial w_h} && (\text{$f_1=h_t$, $f_2=h_{t-1}$})
 \end{align}
 
-Now, we need to expand $\frac{\partial h_{t-2}}{\partial w_h}$ using eqn \ref{eq: h_t-2 wrt wh} to get the final
-form but we can instead write it more compactly by realizing that this equation is ultimately 
-a \textbf{summation of multiplications}. Let's break it down next.
-
-\textbf{What are the terms of the summation?} Observe that every term's last (right-most) term is 
-partial of $h_i$ and $i$ progresses from the beginning and ends at $t$ as we move from right to left
-in the summation. Hence, $i$ is our index of summation. Now, every term is again a cascade of 
-multiplications, decreasing in  number of multipliers as we move from right to left in the summation.
-Every multiplier term is a partial of $h_j$ wrt $h_{j-1}$. (If our index of multiplication was $i$, as it was for the summation, each summation term would be different from
-those found in eqn \ref{eq: h_t wrt wh}.)
-
-Thus, the final form of \ref{eq: h_t wrt wh} can be written as,
-
+which is equivalent to, 
 \[
 \boxed{\frac{\partial h_t}{\partial w_h} = \frac{\partial h_t}{\partial w_h} + \sum_{i=1}^{t-1}\prod_{j-1=i}^{t} (\frac{\partial h_j}{\partial h_{j-1}}) \frac{\partial h_i}{\partial w_h}
 }
 \]
 
 Which is the same as equation 9.7.7 in \cite{d2l_bptt}.
+
+% Now, we need to expand $\frac{\partial h_{t-2}}{\partial w_h}$ using eqn \ref{eq: h_t-2 wrt wh} to get the final
+% form but we can instead write it more compactly by realizing that this equation is ultimately 
+% a \textbf{summation of multiplications}. Let's break it down next.
+
+\textbf{How do we arrive at the final form?:} In equation 11, if we expand $\frac{\partial h_{t-2}}{\partial w_h}$
+(and subsequently expand more terms that recursively emerge), observe that every term's last (right-most) 
+term is  partial of $h_i$ as $i$ \textbf{progresses} from the beginning and ends at $t$ as we move from right to left
+in the summation. Hence, $i$ is our index of summation (The term that ``progresses" should be what we sum over).
+Now, every term is again a cascade of products, decreasing in number of multipliers as we move from right to left in the summation.
+Every multiplier term is a partial of $h_j$ wrt $h_{j-1}$. (Note that it is tempting to set our index of product as 
+$i$, as it was for the summation, but doing this would not achieve the final form)
+
 
 \printbibliography
 

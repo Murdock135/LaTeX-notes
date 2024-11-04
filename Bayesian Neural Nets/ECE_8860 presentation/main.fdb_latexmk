@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1713372276.20472 "c:/Users/Zayan/OneDrive - University of Missouri/Academics/Postgrad/Mizzou/sem 2/prob/presentation/bayesian neural net/main.tex" "main.pdf" "main" 1713372279.67384 0
+["pdflatex"] 1713389473.6134 "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Bayesian Neural Nets/ECE_8860 presentation/main.tex" "main.pdf" "main" 1713389475.16438 0
   "C:/Users/Zayan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1712334819 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/Zayan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706998271 24225045 749a393689d4ba5129a20139050bf5a8 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1233951848 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -217,12 +217,12 @@
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/translator/translator.sty" 1622471510 8765 56d370785f0143111ff9898b5adfe08e ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Zayan/OneDrive - University of Missouri/Academics/Postgrad/Mizzou/sem 2/prob/presentation/bayesian neural net/main.tex" 1713372274 3702 d3f196fc5c67d97e57e08426d6da493c ""
+  "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Bayesian Neural Nets/ECE_8860 presentation/main.tex" 1713389471 2999 ca72fc87ab7f97ba0c69c2f18b5cb5be ""
   "figs/BNN.png" 1713309964 57730 4ca0ab34bc5276f1b9634e8fc357cac8 ""
-  "main.aux" 1713372279 1587 5542631439a0afde58d5ca6558618f97 "pdflatex"
-  "main.nav" 1713372279 1011 83c4ff004b77303d878240d0bcc95e05 "pdflatex"
-  "main.out" 1713372278 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1713372274 3702 d3f196fc5c67d97e57e08426d6da493c ""
+  "main.aux" 1713389474 1215 2e458073651123d6b5c5e93598efc831 "pdflatex"
+  "main.nav" 1713389474 747 0e276c0940a342ad38699132b0e9aa8d "pdflatex"
+  "main.out" 1713389474 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1713389471 2999 ca72fc87ab7f97ba0c69c2f18b5cb5be ""
   (generated)
   "main.aux"
   "main.log"

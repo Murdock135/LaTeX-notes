@@ -1,18 +1,17 @@
 # Fdb version 4
-["biber loss_wrt_whh"] 1711382756.16915 "loss_wrt_whh.bcf" "loss_wrt_whh.bbl" "loss_wrt_whh" 1711382761.30142 0
-  "loss_wrt_whh.bcf" 1711382761 108035 e197a0d654cd7cbc0cdb909fe37d384d "pdflatex"
+["biber loss_wrt_whh"] 1712119410.40774 "loss_wrt_whh.bcf" "loss_wrt_whh.bbl" "loss_wrt_whh" 1712334521.22858 0
+  "loss_wrt_whh.bcf" 1712334520 108098 6fc24a6029c115ccaa8cc1431bac1eaf "pdflatex"
   "references.bib" 1711382755 682 eeea741df8a2c54746b28f243f491b5c ""
   (generated)
   "loss_wrt_whh.bbl"
   "loss_wrt_whh.blg"
   (rewritten before read)
-["pdflatex"] 1711382759.85941 "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Mathematical_proofs/bptt_rnn/loss_wrt_whh.tex" "loss_wrt_whh.pdf" "loss_wrt_whh" 1711382761.30223 0
-  "C:/Users/Zayan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1709256473 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1712334518.42997 "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Mathematical_proofs/bptt_rnn/loss_wrt_whh.tex" "loss_wrt_whh.pdf" "loss_wrt_whh" 1712334521.22984 0
+  "C:/Users/Zayan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1712332000 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/Zayan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706998271 24225045 749a393689d4ba5129a20139050bf5a8 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
-  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbxti10.tfm" 1136765053 1532 9162035f4e7176612125649e348e2195 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -28,7 +27,6 @@
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti12.tfm" 1136765053 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmtt12.tfm" 1136765053 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
-  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1247596667 36554 b67dc2cfa451409e100b3fcf5f506509 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
@@ -118,12 +116,12 @@
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1700599895 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty" 1700599895 12935 94a3291359b5f73ff1b19345a6983105 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Mathematical_proofs/bptt_rnn/loss_wrt_whh.tex" 1711380652 5812 15252e96c111e15129d52c91469d0a7d ""
-  "loss_wrt_whh.aux" 1711382761 1119 b0590ff272cdd9262caa35cfefd3dd4b "pdflatex"
-  "loss_wrt_whh.bbl" 1711382758 3058 bb75c2544ee6cc6b5c57069e6db5313f "biber loss_wrt_whh"
-  "loss_wrt_whh.out" 1711382760 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "loss_wrt_whh.run.xml" 1711382761 2361 13ca42cb86df6d059fdbd21ca7903169 "pdflatex"
-  "loss_wrt_whh.tex" 1711380652 5812 15252e96c111e15129d52c91469d0a7d ""
+  "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Mathematical_proofs/bptt_rnn/loss_wrt_whh.tex" 1712119713 7125 514160ac5925ce0a36115dc07a77c553 ""
+  "loss_wrt_whh.aux" 1712334520 1230 d360306441e30e69aa5b296670a8ece7 "pdflatex"
+  "loss_wrt_whh.bbl" 1712119412 3058 bb75c2544ee6cc6b5c57069e6db5313f "biber loss_wrt_whh"
+  "loss_wrt_whh.out" 1712334520 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "loss_wrt_whh.run.xml" 1712334520 2361 13ca42cb86df6d059fdbd21ca7903169 "pdflatex"
+  "loss_wrt_whh.tex" 1712119713 7125 514160ac5925ce0a36115dc07a77c553 ""
   "rnn.png" 1711323500 85743 ba6191e559d9772db2eff332153287b8 ""
   (generated)
   "loss_wrt_whh.aux"

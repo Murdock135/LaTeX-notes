@@ -19,20 +19,15 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{d2l_bptt}{online}{}
+    \entry{d2l_bptt}{misc}{}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://d2l.ai/chapter_recurrent-neural-networks/bptt.html}}
       \field{note}{Accessed: 2024-03-24}
       \field{title}{Backpropagation Through Time}
-      \verb{urlraw}
-      \verb https://d2l.ai/chapter_recurrent-neural-networks/bptt.html
-      \endverb
-      \verb{url}
-      \verb https://d2l.ai/chapter_recurrent-neural-networks/bptt.html
-      \endverb
     \endentry
-    \entry{murat_bptt}{online}{}
+    \entry{murat_bptt}{misc}{}
       \name{author}{1}{}{%
         {{hash=c952671d5b90ea884205dddf0fcc8d8a}{%
            family={Karakaya},
@@ -50,15 +45,35 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://mmuratarat.github.io/2019-02-07/bptt-of-rnn}}
       \field{note}{Accessed: 2024-03-24}
       \field{title}{Backpropagation Through Time of RNN}
       \field{year}{2019}
-      \verb{urlraw}
-      \verb https://mmuratarat.github.io/2019-02-07/bptt-of-rnn
-      \endverb
-      \verb{url}
-      \verb https://mmuratarat.github.io/2019-02-07/bptt-of-rnn
-      \endverb
+    \endentry
+    \entry{multivariate_chain_rule}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5171aa5e30f59ce75c38d82fbd3a2b89}{%
+           family={notes},
+           familyi={n\bibinitperiod},
+           given={Paul's},
+           giveni={P\bibinitperiod},
+           prefix={online},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{5171aa5e30f59ce75c38d82fbd3a2b89}
+      \strng{fullhash}{5171aa5e30f59ce75c38d82fbd3a2b89}
+      \strng{bibnamehash}{5171aa5e30f59ce75c38d82fbd3a2b89}
+      \strng{authorbibnamehash}{5171aa5e30f59ce75c38d82fbd3a2b89}
+      \strng{authornamehash}{5171aa5e30f59ce75c38d82fbd3a2b89}
+      \strng{authorfullhash}{5171aa5e30f59ce75c38d82fbd3a2b89}
+      \field{sortinit}{n}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://tutorial.math.lamar.edu/classes/calciii/chainrule.aspx}}
+      \field{note}{Accessed: 2024-03-24}
+      \field{title}{Chain rule}
+      \field{year}{2018}
     \endentry
   \enddatalist
 \endrefsection

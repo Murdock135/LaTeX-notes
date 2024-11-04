@@ -1,0 +1,49 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{quotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+
+% set reference files
+\usepackage{biblatex}
+\addbibresource{references.bib}
+
+% set margins
+\usepackage{geometry}
+\geometry{margin=1in}
+
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+
+\title{Neural Gas}
+\author{Qazi Zarif Ul Islam}
+
+\onehalfspacing
+\begin{document}
+\maketitle
+
+This is a refined write-up of the Neural Gas algorithm. \cite{NeuralGas}.
+I believe the algorithm could've been written in a more succinct and 
+mathematically robust manner hence this endeavor.
+
+\begin{algorithm}
+    \caption*{Neural Gas algorithm}
+    \begin{algorithmic}[1]
+        \State If we have n input data points,
+        Let inputs be denoted as $v_i \in \mathbb{R}^n$ for $\forall i \in {1,2,...N}$
+        and codebooks as $w_k \in \mathbb{R}^n$ for $\forall i \in {1,2,...K}$ where
+        $K \leq N$
+        \State Let a connection matrix $C_{ij(N x K)}$ be initialized with 0's
+    \end{algorithmic}
+\end{algorithm}
+\printbibliography
+
+\end{document}
