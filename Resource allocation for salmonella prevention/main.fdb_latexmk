@@ -1,17 +1,19 @@
 # Fdb version 4
-["biber main"] 0 "main.bcf" "main.bbl" "main" 1732047777.32616 -1
-  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/bibtex/bib/feupphdteses/references.bib" 1366811700 2206 985e03fb36d872d306e76cfacc160693 ""
-  "main.bcf" 1732047776 107351 0470ecce0075ae5b433b575e6548d19b "pdflatex"
+["biber main"] 1732641589.89992 "main.bcf" "main.bbl" "main" 1732642645.69546 0
+  "main.bcf" 1732642645 107532 7075048cd3a5e358bb48a03e43821ad9 "pdflatex"
+  "references.bib" 1732557102 2892 458a5e93230be5c67ca1cb74bbf91fac ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1732047774.90204 "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" "main.pdf" "main" 1732047777.32735 0
+["pdflatex"] 1732642643.98779 "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" "main.pdf" "main" 1732642645.69641 0
   "C:/Users/Zayan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1727278085 82973 ba8131259d36bdcc0610dcca1a6ad87a ""
   "C:/Users/Zayan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706998271 24225045 749a393689d4ba5129a20139050bf5a8 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx6.tfm" 1136765053 1344 8a0be4fe4d376203000810ad4dc81558 ""
+  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx8.tfm" 1136765053 1332 1fde11373e221473104d6cc5993f046e ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmex10.tfm" 1136765053 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi6.tfm" 1136765053 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -25,9 +27,13 @@
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmti12.tfm" 1136765053 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1247596666 32080 340ef9bf63678554ee606688e7b5339d ""
+  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb" 1247596666 32166 b0c356b15f19587482a9217ce1d8fa67 ""
+  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1247596667 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1247596667 36118 fad905eba93cff5bce1e185fe980a177 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -101,12 +107,12 @@
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1700599895 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty" 1700599895 12935 94a3291359b5f73ff1b19345a6983105 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" 1732047773 4860 6a59c35923fc2a13cb85db10b797f4ad ""
-  "main.aux" 1732047776 905 7a75100cd2abdbeac29c64345eabfb17 "pdflatex"
-  "main.bbl" 1732034669 486 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.out" 1732047776 745 d89d53f1bb97975ec4e815e4afef3009 "pdflatex"
-  "main.run.xml" 1732047776 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
-  "main.tex" 1732047773 4860 6a59c35923fc2a13cb85db10b797f4ad ""
+  "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" 1732642643 10891 1c9aba9e993dcbb794e83a2639fe6f19 ""
+  "main.aux" 1732642645 1515 65b5114fe16328069ddc1066e7efeb86 "pdflatex"
+  "main.bbl" 1732641592 6613 ecc0496cff8b97965a206bfe3d366f54 "biber main"
+  "main.out" 1732642645 1189 a0d776848d923123118e16d1673a85df "pdflatex"
+  "main.run.xml" 1732642645 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.tex" 1732642643 10891 1c9aba9e993dcbb794e83a2639fe6f19 ""
   (generated)
   "main.aux"
   "main.bcf"

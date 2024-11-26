@@ -16,5 +16,123 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{spo}{article}{}
+      \name{author}{2}{}{%
+        {{hash=72760cf91be43b7e1173e52ad2ec220a}{%
+           family={Elmachtoub},
+           familyi={E\bibinitperiod},
+           given={Adam\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=16bb9e78aff555f22b13c959b6e5fbe4}{%
+           family={Grigas},
+           familyi={G\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bfb2026397a29247bcd040100a45599}
+      \strng{fullhash}{5bfb2026397a29247bcd040100a45599}
+      \strng{bibnamehash}{5bfb2026397a29247bcd040100a45599}
+      \strng{authorbibnamehash}{5bfb2026397a29247bcd040100a45599}
+      \strng{authornamehash}{5bfb2026397a29247bcd040100a45599}
+      \strng{authorfullhash}{5bfb2026397a29247bcd040100a45599}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many real-world analytics problems involve two significant challenges: prediction and optimization. Because of the typically complex nature of each challenge, the standard paradigm is predict-then-optimize. By and large, machine learning tools are intended to minimize prediction error and do not account for how the predictions will be used in the downstream optimization problem. In contrast, we propose a new and very general framework, called Smart “Predict, then Optimize” (SPO), which directly leverages the optimization problem structure—that is, its objective and constraints—for designing better prediction models. A key component of our framework is the SPO loss function, which measures the decision error induced by a prediction. Training a prediction model with respect to the SPO loss is computationally challenging, and, thus, we derive, using duality theory, a convex surrogate loss function, which we call the SPO+ loss. Most importantly, we prove that the SPO+ loss is statistically consistent with respect to the SPO loss under mild conditions. Our SPO+ loss function can tractably handle any polyhedral, convex, or even mixed-integer optimization problem with a linear objective. Numerical experiments on shortest-path and portfolio-optimization problems show that the SPO framework can lead to significant improvement under the predict-then-optimize paradigm, in particular, when the prediction model being trained is misspecified. We find that linear models trained using SPO+ loss tend to dominate random-forest algorithms, even when the ground truth is highly nonlinear.This paper was accepted by Yinyu Ye, optimization.Supplemental Material: Data and the online appendix are available at https://doi.org/10.1287/mnsc.2020.3922}
+      \field{journaltitle}{Management Science}
+      \field{number}{1}
+      \field{title}{Smart “Predict, then Optimize”}
+      \field{volume}{68}
+      \field{year}{2022}
+      \field{pages}{9\bibrangedash 26}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1287/mnsc.2020.3922
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1287/mnsc.2020.3922
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1287/mnsc.2020.3922
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1287/mnsc.2020.3922
+      \endverb
+    \endentry
+    \entry{Mandi_2024}{article}{}
+      \name{author}{7}{}{%
+        {{hash=585cbabbe51e265ae378d05f9ca866ac}{%
+           family={Mandi},
+           familyi={M\bibinitperiod},
+           given={Jayanta},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1e5be91f028b4a84198991171b3c22ea}{%
+           family={Kotary},
+           familyi={K\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a1646d5239c2e234838dd07e1656d41c}{%
+           family={Berden},
+           familyi={B\bibinitperiod},
+           given={Senne},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d0364ca58c188eeea2a901261aa68690}{%
+           family={Mulamba},
+           familyi={M\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3044e9941e7e88e7099111067c684961}{%
+           family={Bucarey},
+           familyi={B\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=2a9ad3a0307f4d7e4e3a864aa91a28ef}{%
+           family={Guns},
+           familyi={G\bibinitperiod},
+           given={Tias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d8094523ec4b781111936d02a59b093c}{%
+           family={Fioretto},
+           familyi={F\bibinitperiod},
+           given={Ferdinando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AI Access Foundation}%
+      }
+      \strng{namehash}{d92d458f62289bc759d9aaea8a3e46ad}
+      \strng{fullhash}{3645d444144521e485546644da6771f2}
+      \strng{bibnamehash}{d92d458f62289bc759d9aaea8a3e46ad}
+      \strng{authorbibnamehash}{d92d458f62289bc759d9aaea8a3e46ad}
+      \strng{authornamehash}{d92d458f62289bc759d9aaea8a3e46ad}
+      \strng{authorfullhash}{3645d444144521e485546644da6771f2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1076-9757}
+      \field{journaltitle}{Journal of Artificial Intelligence Research}
+      \field{month}{8}
+      \field{title}{Decision-Focused Learning: Foundations, State of the Art, Benchmark and Future Opportunities}
+      \field{volume}{80}
+      \field{year}{2024}
+      \field{pages}{1623\bibrangedash 1701}
+      \range{pages}{79}
+      \verb{doi}
+      \verb 10.1613/jair.1.15320
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1613/jair.1.15320
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1613/jair.1.15320
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
