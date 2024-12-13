@@ -7,6 +7,7 @@
 \usepackage{quotes}
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{xcolor}
 
 % set reference files
 \usepackage{biblatex}
@@ -31,94 +32,201 @@
 
 \section{Introduction}
 
-\textbf{"Given some input data, output data and a feasible input space, determine the optimal combination 
-of the input data for the optimal output data"}- This is the problem we seek to solve. For example,
-Suppose we don't know the exact profit per unit for Product A and Product B, but we have historical data on 
-production quantities and the corresponding total profits. Our goal is to determine the optimal production 
-quantities of Product A and Product B to maximize profit, given resource constraints and without explicit 
-knowledge of per-unit profits.
+\textbf{"Given some input data, output data, and a feasible input space,
+determine the optimal combination of input data to achieve the desired
+output"}—this is the fundamental problem we seek to address. For instance,
+consider a scenario where the per-unit profit for Product A and Product B is
+unknown, but historical data on production quantities and corresponding total
+profits is available. The task is to determine the optimal production quantities
+of Product A and Product B to maximize profit, given resource constraints,
+without explicit knowledge of per-unit profits.
 
-We will argue in this paper that the above task requires techniques beyond commonly used data driven
-techniques such as Machine Learning and statistics and finally propose a simple framework that tries
-to solve such a problem. The paper is structured in the following manner: section 2.1 discusses the 
-central tenets of machine learning. Section 2.2 Discusses techniques that currently exist for problems
-that involve decision making using data.
+Traditional data-driven techniques, such as Machine Learning (ML) and
+statistical methods, have achieved remarkable success in prediction and
+inference. However, they are often inadequate for problems where the goal is not
+only to predict but to prescribe decisions that optimize outcomes under
+constraints. For instance, while ML models can predict profits based on past
+data, they do not inherently account for how the predicted outcomes influence or
+are influenced by decision variables.
 
-% The dawn of mankind did not only mark the beginnging of the human race. It also marked the beginning 
-% of a battle between this new organism, `mankind', and the previous residents of this planet-
-% microorganisms. As we live and breathe, we blatantly ignore our cohabitants, bacteria and viruses.
-% However, we are never free from their clutches. Every year, millions of humans undergo a period-
-% may be as short as a day or as long as several years- of struggle, battling against the 
-% effects of bacteria such as E.coli (Escherichia coli), Salmonella, Streptococcus pyogenes, 
-% Staphylococcus aureus, Clostridium botulinum, etc. These bacteria thrive on certain ambient 
-% conditions and environments. These environments can be of varying characterisitcs. Some thrive 
-% in moist, cold environments and some in hot environments and then some others in different kinds 
-% of surfaces. For example, halophiles trive on high salt concentrations while Barophiles thrive on
-% high pressure conditions. 
+This paper argues that solving such problems requires integrating learning with
+optimization to form a cohesive decision-making framework. Specifically, we
+propose a framework rooted in \textbf{Predict, then Optimize}, which aims to
+bridge the gap between predictive models and optimization problems.
+
+The rest of the paper is structured as follows: Section 2.1 discusses the
+central tenets of machine learning and its limitations in solving
+decision-making problems. Section 2.2 explores existing techniques for
+decision-making using data, such as optimization, stochastic programming, and
+data-driven control. Finally, we propose our framework in Section 3 and outline
+potential applications and future directions.
+
+
+% \textbf{"Given some input data, output data and a feasible input space,
+% determine the optimal combination of the input data for the optimal output
+% data"}- Fundamentally, This is the problem we seek to solve. For example,
+% Suppose we don't know the exact profit per unit for Product A and Product B, but
+% we have historical data on production quantities and the corresponding total
+% profits. Our goal is to determine the optimal production quantities of Product A
+% and Product B to maximize profit, given resource constraints and without
+% explicit knowledge of per-unit profits.
+
+% We will argue in this paper that the above task requires techniques beyond
+% commonly used data driven techniques such as Machine Learning and statistics and
+% finally propose a simple framework that tries to solve such a problem. The paper
+% is structured in the following manner: section 2.1 discusses the central tenets
+% of machine learning and how it can help solve the above problem. Section 2.2
+% Discusses techniques that currently exist for similar problems i.e. problems
+% that involve decision making using data.
+
+% The dawn of mankind did not only mark the beginnging of the human race. It
+% also marked the beginning of a battle between this new organism, `mankind',
+% and the previous residents of this planet- microorganisms. As we live and
+% breathe, we blatantly ignore our cohabitants, bacteria and viruses. However,
+% we are never free from their clutches. Every year, millions of humans undergo
+% a period- may be as short as a day or as long as several years- of struggle,
+% battling against the effects of bacteria such as E.coli (Escherichia coli),
+% Salmonella, Streptococcus pyogenes, Staphylococcus aureus, Clostridium
+% botulinum, etc. These bacteria thrive on certain ambient conditions and
+% environments. These environments can be of varying characterisitcs. Some
+% thrive in moist, cold environments and some in hot environments and then some
+% others in different kinds of surfaces. For example, halophiles trive on high
+% salt concentrations while Barophiles thrive on high pressure conditions. 
+
+\section{Background}
+
 
 \subsection{The central tenets of Machine Learning}
 \label{sec: The central tenets of Machine Learning}
-Machine learning (ML) is a field that primarily focuses on predicting some outcome, given some data. The central
-tenet of using such a framework is that the input variables that are used are somehow correlated 
-with the outcome. For example, in the popular iris dataset, the input variables are the sepal and petal
-characterisitcs and the outcome is one of three species of the iris flower. The secondary tenet is 
-that no observation made in this world is by itself the true representation of what is being observed and 
-so \textit{all observations} are noisy (contain noisy information). Thus, it follows that a single 
-prediction made from a single noisy observation is also noisy (Noisy input gives noisy output). However,
-time and time again, such predictions have proven helpful. For example, a $\geq90\%$ accurate transformer
-is deemed capable enough to complete incomplete passages or poems, computer vision systems are used to 
-identify objects, understand human sentiments, etc. These wonders are due to the fact that all phenomena
-are generated by probability distributions and a random sample approaches a limiting probability
-distribution as the size of the sample increases. Thus, even though the learner is unaware of the underlying 
-limiting distribution, as we increase the sample size, the particular error-correction algorithm of the learner
-leads it towards the true prediction. 
+Machine learning (ML) is a field that primarily focuses on predicting some
+outcome, given some data. The central tenet of using such a framework is that
+the input variables that are used are somehow correlated with the outcome. For
+example, in the popular iris dataset, the input variables are the sepal and
+petal characterisitcs and the outcome is one of three species of the iris
+flower. The secondary tenet is that no observation made in this world is by
+itself the true representation of what is being observed and so \textit{all
+observations} are noisy (contain noisy information). Thus, it follows that a
+single prediction made from a single noisy observation is also noisy (Noisy
+input gives noisy output). However, time and time again, such predictions have
+proven helpful. For example, a $\geq90\%$ accurate transformer is deemed capable
+enough to complete incomplete passages or poems, computer vision systems are
+used to identify objects, understand human sentiments, etc. These wonders are
+due to the fact that all phenomena are generated by probability distributions
+and a random sample approaches a limiting probability distribution as the size
+of the sample increases. Thus, even though the learner is unaware of the
+underlying limiting distribution, as we increase the sample size, the particular
+error-correction algorithm of the learner leads it towards the true prediction. 
+
 
 \subsection{Techniques that drive decision making}
-ML based products have been used primarily to make tasks more efficient, not to induce social policy and decision.
-We trust qualitative arguments when deciding where to build a hospital or where to put more health care funding.
-One explanation for this is that we can determine biases in an argument instantly and doing the same for 
-a learner is much harder, simply due to the secondary tenet (see \ref{sec: The central tenets of Machine 
-Learning}). Another reason for the insuitability of ML techniques in this area is that the predictions do 
-not take into account \textit{its own effects} on downstream decisions. But where we have not trusted 
-predictions, we have trusted optimization and statistical testing. \textbf{Optimization techniques} have been heavily 
-relied on when a deterministic answer is deemed to exist. Examples of such problems include The Travelling 
-Salesman proble, The Knapsack problem, etc. Optimization problems
-differ from Machine Learning problems in that the problem is not solved using data but rather a fixed set 
-of conditions. This fixed set contains a function relating the inputs to the output and equations that 
-give the `feasible answer region'. But, there are numerous problems where we don't have a function that 
-gives the input-output relationship but yet we want to optimize the inputs for either maximizing or 
-minimizing the output based on some constraints on the inputs. For example, the problem of socio-economic resource 
-allocation in order to lessen viral infections. Another area that contains techniques that lead to decisions from 
-data as opposed to predictions from data is \textbf{statistical hypothesis testing}. However, using hypothesis testing 
-requires knowledge of the underlying probability distributions and real world data does not explicitly express the probability
-distribution it is generated from. \textbf{Data driven control} provides a way to \textit{control} the input variables
-and thereby, optimize them for a desired output however, requires knowledge of the input-output relationships. 
-Furthermore, data driven control is usually applied to dynamic systems where the variables describing the system
-changes with time. Time is indeed an important consideration in many problems but real world data often either 
-describe a static system or the data pertains to the system at a particular timepoint. 
+ML based products have been used primarily to make tasks more efficient, not to
+induce social policy and decision. We trust qualitative arguments when deciding
+where to build a hospital or where to put more health care funding. One
+explanation for this is that we can determine biases in an argument instantly
+and doing the same for a learner is much harder, simply due to the secondary
+tenet (see \ref{sec: The central tenets of Machine Learning}). Another reason
+for the insuitability of ML techniques in this area is that the predictions do
+not take into account \textit{its own effects} on downstream decisions. But
+where we have not trusted predictions, we have trusted optimization and
+statistical testing. \textbf{Optimization techniques} have been heavily relied
+on when a deterministic answer is deemed to exist. Examples of such problems
+include The Travelling Salesman problem, The Knapsack problem, etc. Apart from
+\textbf{Stochastic programming}, a particular paradigm of optimization method,
+these problems differ from Machine Learning problems in that the problem is not
+solved using data but rather a fixed set of conditions. This fixed set contains
+a function relating the inputs to the output and equations that give the
+`feasible answer region'. But, there are numerous problems where we don't have a
+function that gives the input-output relationship but yet we want to optimize
+the inputs for either maximizing or minimizing the output based on some
+constraints on the inputs. For example, the problem of socio-economic resource
+allocation in order to lessen viral infections. \textbf{Stochastic programming}
+however, derives the \textit{expected objective function} from historical data
+and then minimizes that, which is similar to Machine Learning settings. 
 
-The above limitations called for new techniques that can optimize inputs simply using historical data, by
-predicting the relationship between the inputs and ouput and then using the predicted relationship to formulate
-an optimization problem. \cite{Mandi_2024} proposed the name "\textbf{Predict, then optimize}" for this framework
-and used the term `\textbf{Decision Focused Learning}' to describe the techniques. To our 
-knowledge, \cite{spo} was the first to propose such a method, wherein a trained predictive model was used to 
-predict a cost vector, given an input vector, and then the cost vector and input vector were used to form an 
-objective function for an optimizer to solve. The cost vector $\mathbf{c}$ is basically the coefficient vector, 
-which, combines with input vector $\mathbf{f}$ as follows to form an objective function $f$,
+Another area that contains techniques that lead to decisions from data as
+opposed to predictions from data is \textbf{statistical hypothesis testing}.
+However, using hypothesis testing requires knowledge of the underlying
+probability distributions and real world data does not explicitly express the
+probability distribution it is generated from. \textbf{Data driven control}
+provides a way to \textit{control} the input variables and thereby, optimize
+them for a desired output however, requires knowledge of the input-output
+relationships. When this relationship is unknown, \textbf{System identification}
+is used to derive it. Data driven control and system identification are usually
+applied to dynamic systems where the variables describing the system changes
+with time. It is however possible to use another variable as a proxy for time to
+hold information about how the system changes with that proxy variable. First,
+we need to have a model structure, for example,
+
+\begin{equation}
+    y(k) + ay(k-1) = bu(k)
+\end{equation}
+
+Where \textbf{a} and \textbf{b} are adjustable (learnable) parameters. From this
+model structure, we use historical (input, output) data to derive the learnable
+parameters. Usually, the input and output data are recorded through time. If
+we instead have static data, though it is possible to simply index every observation
+and then use the indices as k, when the data is shuffled, it changes the dynamical 
+system itself. Thus every shuffling order of the data gives a new dynamic system.
+Besides, there is no inherent temporal information in the indices, they are simply
+numbers with no physical or temporal meaning.
+
+\textcolor{red}{\textbf{Genetic algorithms}} on the other hand, use search algorithms inspired by
+population behaviours that exist in nature to find the global minimum of a
+manifold. 
+
+The above limitations called for new techniques that can optimize inputs simply
+using historical data, by predicting the relationship between the inputs and
+ouput and then using the predicted relationship to formulate an optimization
+problem. \cite{Mandi_2024} proposed the name "\textbf{Predict, then optimize}"
+for this framework and used the term `\textbf{Decision Focused Learning}' (DFL) to
+describe the techniques. To our knowledge, \cite{spo} was the first to propose
+such a method, wherein a trained predictive model was used to predict a cost
+vector, given an input vector, and then the cost vector and input vector were
+used to form an objective function for an optimizer to solve. The simplest
+representation of such an objective function is,
 
 \begin{equation}
     f(\mathbf{x}, \mathbf{c}) = \mathbf{x}.{\mathbf{c}}
 \end{equation}
 
-The predictive model needs to be trained in a supervised manner and so, we must bear knowledge of how each 
-variable in the input vector $\mathbf{x}$ individually affects the function $f$, which is not available in 
-many real-world scenarios. We can use a more simplified approach wherein we are given input-output 
-pairs, $\mathbf{(x,y)}$ and we have to produce a symbolic function, expressing the mapping between the input 
-and output. The following section discusses such techniques in the existing literature. 
+The predictive model needs to be trained in a supervised manner and so, we must
+bear knowledge of how each variable in the input vector $\mathbf{x}$
+individually affects the function $f$, which is not available in many real-world
+scenarios. To our knowledge, \cite{Google_DFL}, was the first to apply DFL in a
+real-world scenario to optimize the scheduling of live service calls in a
+maternal and child health awareness program. They used socio-demographic
+features (e.g., age, income, education) and historical engagement states (e.g.,
+whether beneficiaries listened to calls) as inputs, while the engagement
+outcomes (e.g., listening behavior) served as outputs. The model predicted
+transition probabilities between engagement states (engaging/non-engaging) under
+different actions (call/no call). These predicted probabilities were used to
+compute Whittle Indices \cite{P.Whittle}, which prioritized beneficiaries for
+live service calls based on their potential to benefit. We can use a more
+simplified approach wherein we are given input-output pairs, $\mathbf{(x,y)}$
+and we have to produce a symbolic function, expressing the mapping between the
+input and output. Thus, in the end, the problem is simply one of
+\textbf{symbolic regression} (SR). After the symbolic expression of the function
+is obtained via symbolic regression, we use it as the objective function.
+Symbolic regression has been used to add a layer of `interpretability' to black
+box machine learning methods that learn functions. We start with a set of
+possible arithmetic operators known as the `library' and define the
+dimensionality of the function space. For example, a library could be $L=\{
+id(.), add(.,.), sub(.,.), mul(.,.), +1, -1\}$. This particular library can
+compose the set of all polynomials in one variable with integer coefficients
+\cite{SR_2024}. \cite{SR_2024} conducted a comprehensive survey on SR methods
+and divided the techniques into 4 fundamental types; (1) Regression based
+methods (2) Tree based methods (3) Physics inspired methods and (4) Mathematics
+inspired methods. Genetic algorithms can actually be used as a tree based
+method. Recently, \textbf{Kolmogorov Arnold Networks} were shown to perform
+better at Symbolic Regression than any other method \cite{kans_2024}.
 
-\section{Preliminaries}
-Suppose the goal is to determine a combination of inputs $\{x\}_n$, constrained by some conditions , that maximizes or
-minimizes an output, which is a function of $\{x\}_n$. This problem can be described as,
+In the following section. We discuss two approaches that we think could be adopted
+to solve resource allocation problems based on historical data. 
+
+\section{Formalization of the problem}
+Suppose the goal is to determine a combination of inputs $\{x\}_n$, constrained
+by some conditions , that maximizes or minimizes an output, which is a function
+of $\{x\}_n$. This problem can be described as,
 
 % \begin{align}
 %     \text{Given,}\\
@@ -138,9 +246,9 @@ minimizes an output, which is a function of $\{x\}_n$. This problem can be descr
     \mathbf{x}^* &= \arg \min_{\mathbf{x}} f(\mathbf{x}),
 \end{align}
 
-Where $\mathbf{c}$ is the coefficient vector that is unknown. Fortunately, ML techniques provide a way to 
-estimate this vector from data. If $\hat{\mathbf{c}}$ is the predicted coefficient vector, the problem 
-becomes,
+Where $\mathbf{c}$ is the coefficient vector that is unknown. Fortunately, ML
+techniques provide a way to estimate this vector from data. If
+$\hat{\mathbf{c}}$ is the predicted coefficient vector, the problem becomes,
 
 \begin{align}
     \text{Given,}  & \\
@@ -151,38 +259,37 @@ becomes,
     \mathbf{x}^*(\hat{\mathbf{c}}) &= \arg \min_{\mathbf{x}} f(\mathbf{x}, \hat{\mathbf{c}}),
 \end{align}
 
-Where $\mathbf{x}^*$ is a function of $\hat{\mathbf{c}}$ because it is dependent on the prediction made
-by the learner. 
+Where $\mathbf{x}^*$ is a function of $\hat{\mathbf{c}}$ because it is dependent
+on the prediction made by the learner. 
 
-There are two ways of approaching this problem: (1) Modifying the ML learner so that it incorporates the 
-optimization problem into its learning algorithm or, (2) Predicting and then, optimizing, which follows
-the method in \cite{spo}.
+There are two ways of approaching this problem: (1) Modifying the ML learner so
+that it incorporates the optimization problem into its learning algorithm or,
+(2) Predicting and then, optimizing, which follows the method in \cite{spo}.
 
-\subsection{Approach 1}
-In this approach, we don't care about the accuracy of the predictions, $\hat{\mathbf{c}}$, but rather how
-accurate the decision \textit{based on} the prediction is ($\mathbf{x}^*(\hat{\mathbf{c}})$), which we 
-call \textit{Regret}. The Regret is formally expressed below.
+\subsection{Decision Focused learning (DFL)}
+In this approach, we don't care about the accuracy of the predictions,
+$\hat{\mathbf{c}}$, but rather how accurate the decision \textit{based on} the
+prediction is ($\mathbf{x}^*(\hat{\mathbf{c}})$), which we call \textit{Regret}.
+The Regret is formally expressed below.
 
 \begin{equation}
     Regret(\mathbf{x}^*(\hat{\mathbf{c}})) = f(\mathbf{x}^*(\hat{\mathbf{c}}), \mathbf{c}) - f(\mathbf{x}^*(\mathbf{c}), \mathbf{c})
 \end{equation}
 
-Where $f(\mathbf{x}^*(\mathbf{c}), \mathbf{c})$ is the decision that would have been obtained had the optimizer 
-exact knowledge of $\mathbf{c}$. $f(\mathbf{x}^*(\mathbf{c}), \mathbf{c})$ is known as `full information 
-decision'.
+Where $f(\mathbf{x}^*(\mathbf{c}), \mathbf{c})$ is the decision that would have
+been obtained had the optimizer exact knowledge of $\mathbf{c}$.
+$f(\mathbf{x}^*(\mathbf{c}), \mathbf{c})$ is known as `full information
+decision'. Here, as $\hat{\mathbf{c}} \rightarrow \mathbf{c}$, $Regret
+\rightarrow 0$. So, the better the prediction, the lower the regret. Instead of
+making a point estimation, it is also possible to estimate the distribution of
+$\hat{\mathbf{c}}$ so that it is possible to guard against the worst case using
+the distributional knowledge, however more challenging.
 
-\subsection{What are our options?}
-
-\begin{enumerate}
-    \item Gaussian mixture modelling and then hypothesis testing.
-    \item Data driven control- System identification + 
-    \item Physics informed Neural Network
-    \item Miscellaneous
-\end{enumerate}
+\subsection{Express Symbolically, then optimize (ESO)}
 
 \section{Conclusions}
-We need to find a way to automatically discover relationships between the variables themselves to be able to 
-describe the dynamics of the system.
+We need to find a way to automatically discover relationships between the
+variables themselves to be able to describe the dynamics of the system.
 
 
 \end{document}
