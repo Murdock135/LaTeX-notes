@@ -1,3 +1,23 @@
+@article{bias,
+author = {Mehrabi, Ninareh and Morstatter, Fred and Saxena, Nripsuta and Lerman, Kristina and Galstyan, Aram},
+title = {A Survey on Bias and Fairness in Machine Learning},
+year = {2021},
+issue_date = {July 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {54},
+number = {6},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3457607},
+doi = {10.1145/3457607},
+abstract = {With the widespread use of artificial intelligence (AI) systems and applications in our everyday lives, accounting for fairness has gained significant importance in designing and engineering of such systems. AI systems can be used in many sensitive environments to make important and life-changing decisions; thus, it is crucial to ensure that these decisions do not reflect discriminatory behavior toward certain groups or populations. More recently some work has been developed in traditional machine learning and deep learning that address such challenges in different subdomains. With the commercialization of these systems, researchers are becoming more aware of the biases that these applications can contain and are attempting to address them. In this survey, we investigated different real-world applications that have shown biases in various ways, and we listed different sources of biases that can affect AI applications. We then created a taxonomy for fairness definitions that machine learning researchers have defined to avoid the existing bias in AI systems. In addition to that, we examined different domains and subdomains in AI showing what researchers have observed with regard to unfair outcomes in the state-of-the-art methods and ways they have tried to address them. There are still many future directions and solutions that can be taken to mitigate the problem of bias in AI systems. We are hoping that this survey will motivate researchers to tackle these issues in the near future by observing existing work in their respective fields.},
+journal = {ACM Comput. Surv.},
+month = jul,
+articleno = {115},
+numpages = {35},
+keywords = {Fairness and bias in artificial intelligence, deep learning, machine learning, natural language processing, representation learning}
+}
+
 @article{spo,
 author = {Elmachtoub, Adam N. and Grigas, Paul},
 title = {Smart “Predict, then Optimize”},
@@ -87,5 +107,77 @@ doi = {10.1287/mnsc.2020.3922},
       primaryClass={cs.LG},
       url={https://arxiv.org/abs/2404.19756}, 
 }
+
+@misc{yu2024kanmlpfairercomparison,
+      title={KAN or MLP: A Fairer Comparison}, 
+      author={Runpeng Yu and Weihao Yu and Xinchao Wang},
+      year={2024},
+      eprint={2407.16674},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2407.16674}, 
+}
+
+@article{rumelhart1986learning,
+  title={Learning representations by back-propagating errors},
+  author={Rumelhart, David E and Hinton, Geoffrey E and Williams, Ronald J},
+  journal={Nature},
+  volume={323},
+  number={6088},
+  pages={533--536},
+  year={1986},
+  publisher={Springer Nature},
+  doi={10.1038/323533a0},
+  url={https://www.nature.com/articles/323533a0}
+}
+
+@Inbook{Kruse2022,
+author="Kruse, Rudolf
+and Mostaghim, Sanaz
+and Borgelt, Christian
+and Braune, Christian
+and Steinbrecher, Matthias",
+title="Introduction to Evolutionary Algorithms",
+bookTitle="Computational Intelligence: A Methodological Introduction",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="225--254",
+abstract="Evolutionary algorithmEvolutionary algorithms comprise a class of optimization techniques that imitate principles of biological evolution. They belong to the family of metaheuristicsMetaheuristics, which also includes, for example, particle swarm and ant colony optimization, which are inspired by other biological structures and processes, as well as classical methods like simulated annealing, which is inspired by a thermodynamical process. The core principle of evolutionary algorithms is to apply evolution principles like mutation and selection to populations of candidate solutions in order to find a (sufficiently good) solution for a given optimization problem.",
+isbn="978-3-030-42227-1",
+doi="10.1007/978-3-030-42227-1_11",
+url="https://doi.org/10.1007/978-3-030-42227-1_11"
+}
+
+
+@article{masoudnia_mixture_2014,
+	title = {Mixture of experts: a literature survey},
+	volume = {42},
+	issn = {1573-7462},
+	shorttitle = {Mixture of experts},
+	url = {https://doi.org/10.1007/s10462-012-9338-y},
+	doi = {10.1007/s10462-012-9338-y},
+	abstract = {Mixture of experts (ME) is one of the most popular and interesting combining methods, which has great potential to improve performance in machine learning. ME is established based on the divide-and-conquer principle in which the problem space is divided between a few neural network experts, supervised by a gating network. In earlier works on ME, different strategies were developed to divide the problem space between the experts. To survey and analyse these methods more clearly, we present a categorisation of the ME literature based on this difference. Various ME implementations were classified into two groups, according to the partitioning strategies used and both how and when the gating network is involved in the partitioning and combining procedures. In the first group, The conventional ME and the extensions of this method stochastically partition the problem space into a number of subspaces using a special employed error function, and experts become specialised in each subspace. In the second group, the problem space is explicitly partitioned by the clustering method before the experts’ training process starts, and each expert is then assigned to one of these sub-spaces. Based on the implicit problem space partitioning using a tacit competitive process between the experts, we call the first group the mixture of implicitly localised experts (MILE), and the second group is called mixture of explicitly localised experts (MELE), as it uses pre-specified clusters. The properties of both groups are investigated in comparison with each other. Investigation of MILE versus MELE, discussing the advantages and disadvantages of each group, showed that the two approaches have complementary features. Moreover, the features of the ME method are compared with other popular combining methods, including boosting and negative correlation learning methods. As the investigated methods have complementary strengths and limitations, previous researches that attempted to combine their features in integrated approaches are reviewed and, moreover, some suggestions are proposed for future research directions.},
+	language = {en},
+	number = {2},
+	urldate = {2024-11-28},
+	journal = {Artificial Intelligence Review},
+	author = {Masoudnia, Saeed and Ebrahimpour, Reza},
+	month = aug,
+	year = {2014},
+	keywords = {Artificial Intelligence, Classifier combining, Mixture of experts, Mixture of explicitly localised expert, Mixture of implicitly localised experts},
+	pages = {275--293},
+	file = {Full Text PDF:files/1084/Masoudnia and Ebrahimpour - 2014 - Mixture of experts a literature survey.pdf:application/pdf},
+}
+
+@misc{test_functions,
+author = "{Wikipedia contributors}",
+title = "Test functions for optimization --- {Wikipedia}{,} The Free Encyclopedia",
+year = "2024",
+url = "https://en.wikipedia.org/w/index.php?title=Test_functions_for_optimization&oldid=1262242809",
+note = "[Online; accessed 13-December-2024]"
+}
+
+
 
 
