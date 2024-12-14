@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1734125176.99222 "main.bcf" "main.bbl" "main" 1734125287.85921 0
-  "main.bcf" 1734125287 108764 d05ebec350569f370fddfaab814a6d1b "pdflatex"
-  "references.bib" 1734125159 13166 7e342adcb905ae98cad7d5c2fc1a1b20 ""
+["biber main"] 1734133544.09741 "main.bcf" "main.bbl" "main" 1734142410.41181 0
+  "main.bcf" 1734142410 108829 d691027a2c13ca30252577fc32e9037d "pdflatex"
+  "references.bib" 1734133543 13485 dca9dddbb46d0332cedd328ebf866ec3 ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1734125285.95358 "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" "main.pdf" "main" 1734125287.86018 0
+["pdflatex"] 1734142408.27902 "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" "main.pdf" "main" 1734142410.41407 0
   "C:/Users/Zayan/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1727278085 82973 ba8131259d36bdcc0610dcca1a6ad87a ""
   "C:/Users/Zayan/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1706998271 24225045 749a393689d4ba5129a20139050bf5a8 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -114,12 +114,12 @@
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty" 1700599895 12935 94a3291359b5f73ff1b19345a6983105 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Zayan/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" 1734125285 20858 75fa571393ca221e3bcbd10d708940d3 ""
-  "main.aux" 1734125287 3114 1e8459c51b26eaafd264c220f089ce69 "pdflatex"
-  "main.bbl" 1734125179 31364 ef4e9c3cd20e2e63bd0d7fcc7056c306 "biber main"
-  "main.out" 1734125287 1076 ace8c0b1027ac5fa999093b1adc86d5b "pdflatex"
-  "main.run.xml" 1734125287 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
-  "main.tex" 1734125285 20858 75fa571393ca221e3bcbd10d708940d3 ""
+  "c:/Users/Zayan/Documents/code/personal_repos/LaTeX_notes/Resource allocation for salmonella prevention/main.tex" 1734142407 17841 ac3cff32b62404ece2b988b5e48f6e0b ""
+  "main.aux" 1734142410 3241 e12a74a25e390ab78f29739327162d40 "pdflatex"
+  "main.bbl" 1734133547 33108 f6f2e6ab119451a95e9ae06682fe0f2f "biber main"
+  "main.out" 1734142410 1076 ace8c0b1027ac5fa999093b1adc86d5b "pdflatex"
+  "main.run.xml" 1734142410 2305 52095dfad395b381e9a32937e764a41c "pdflatex"
+  "main.tex" 1734142407 17841 ac3cff32b62404ece2b988b5e48f6e0b ""
   (generated)
   "main.aux"
   "main.bcf"

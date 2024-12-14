@@ -1,0 +1,79 @@
+% \textbf{"Given some input data, output data, and a feasible input space,
+% determine the optimal combination of input data to achieve the desired
+% output"}—this is the fundamental problem we seek to address. For instance,
+% consider a scenario where the per-unit profit for Product A and Product B is
+% unknown, but historical data on production quantities and corresponding total
+% profits is available. The task is to determine the optimal production quantities
+% of Product A and Product B to maximize profit, given resource constraints,
+% without explicit knowledge of per-unit profits.
+
+% Traditional data-driven techniques, such as Machine Learning (ML) and
+% statistical methods, have achieved remarkable success in prediction and
+% inference. However, they are often inadequate for problems where the goal is not
+% only to predict but to prescribe decisions that optimize outcomes under
+% constraints. For instance, while ML models can predict profits based on past
+% data, they do not inherently account for how the predicted outcomes influence or
+% are influenced by decision variables.
+
+% This paper argues that solving such problems requires integrating learning with
+% optimization to form a cohesive decision-making framework. Specifically, we
+% propose a framework rooted in \textbf{Predict, then Optimize}, which aims to
+% bridge the gap between predictive models and optimization problems.
+
+% The rest of the paper is structured as follows: Section 2.1 discusses the
+% central tenets of machine learning and its limitations in solving
+% decision-making problems. Section 2.2 explores existing techniques for
+% decision-making using data, such as optimization, stochastic programming, and
+% data-driven control. Finally, we propose our framework in Section 3 and outline
+% potential applications and future directions.
+
+
+% \textbf{"Given some input data, output data and a feasible input space,
+% determine the optimal combination of the input data for the optimal output
+% data"}- Fundamentally, This is the problem we seek to solve. For example,
+% Suppose we don't know the exact profit per unit for Product A and Product B, but
+% we have historical data on production quantities and the corresponding total
+% profits. Our goal is to determine the optimal production quantities of Product A
+% and Product B to maximize profit, given resource constraints and without
+% explicit knowledge of per-unit profits.
+
+% We will argue in this paper that the above task requires techniques beyond
+% commonly used data driven techniques such as Machine Learning and statistics and
+% finally propose a simple framework that tries to solve such a problem. The paper
+% is structured in the following manner: section 2.1 discusses the central tenets
+% of machine learning and how it can help solve the above problem. Section 2.2
+% Discusses techniques that currently exist for similar problems i.e. problems
+% that involve decision making using data.
+
+% The dawn of mankind did not only mark the beginnging of the human race. It
+% also marked the beginning of a battle between this new organism, `mankind',
+% and the previous residents of this planet- microorganisms. As we live and
+% breathe, we blatantly ignore our cohabitants, bacteria and viruses. However,
+% we are never free from their clutches. Every year, millions of humans undergo
+% a period- may be as short as a day or as long as several years- of struggle,
+% battling against the effects of bacteria such as E.coli (Escherichia coli),
+% Salmonella, Streptococcus pyogenes, Staphylococcus aureus, Clostridium
+% botulinum, etc. These bacteria thrive on certain ambient conditions and
+% environments. These environments can be of varying characterisitcs. Some
+% thrive in moist, cold environments and some in hot environments and then some
+% others in different kinds of surfaces. For example, halophiles trive on high
+% salt concentrations while Barophiles thrive on high pressure conditions. 
+
+% Machine learning (ML) is a field that primarily focuses on predicting some
+% outcome, given some data. The central tenet of using such a framework is that
+% the input variables that are used are somehow correlated with the outcome. For
+% example, in the popular iris dataset, the input variables are the sepal and
+% petal characterisitcs and the outcome is one of three species of the iris
+% flower. The secondary tenet is that no observation made in this world is by
+% itself the true representation of what is being observed and so \textit{all
+% observations} are noisy (contain noisy information). Thus, it follows that a
+% single prediction made from a single noisy observation is also noisy (Noisy
+% input gives noisy output). However, time and time again, such predictions have
+% proven helpful. For example, a $\geq90\%$ accurate transformer is deemed capable
+% enough to complete incomplete passages or poems, computer vision systems are
+% used to identify objects, understand human sentiments, etc. These wonders are
+% due to the fact that all phenomena are generated by probability distributions
+% and a random sample approaches a limiting probability distribution as the size
+% of the sample increases. Thus, even though the learner is unaware of the
+% underlying limiting distribution, as we increase the sample size, the particular
+% error-correction algorithm of the learner leads it towards the true prediction. 

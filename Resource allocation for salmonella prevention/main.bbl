@@ -19,6 +19,49 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ml_policy}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f8a86a36126958584ead762bae2b189e}{%
+           family={Amarasinghe},
+           familyi={A\bibinitperiod},
+           given={Kasun},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d0570df084ded1c7784545e630d64584}{%
+           family={Rodolfa},
+           familyi={R\bibinitperiod},
+           given={Kit\bibnamedelima T.},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=a38c2b3ed3ad7be095c23643f70c4671}{%
+           family={Lamba},
+           familyi={L\bibinitperiod},
+           given={Hemank},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6cfc641e2ca8f9579534edebf4ffb064}{%
+           family={Ghani},
+           familyi={G\bibinitperiod},
+           given={Rayid},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{91280e88eb119cd60cf294990c769c80}
+      \strng{fullhash}{71df1fb42c7cea5b71e99e26d1f66fb1}
+      \strng{bibnamehash}{91280e88eb119cd60cf294990c769c80}
+      \strng{authorbibnamehash}{91280e88eb119cd60cf294990c769c80}
+      \strng{authornamehash}{91280e88eb119cd60cf294990c769c80}
+      \strng{authorfullhash}{71df1fb42c7cea5b71e99e26d1f66fb1}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Data \& Policy}
+      \field{title}{Explainable machine learning for public policy: Use cases, gaps, and research directions}
+      \field{volume}{5}
+      \field{year}{2023}
+      \field{pages}{e5}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1017/dap.2023.2
+      \endverb
+    \endentry
     \entry{spo}{article}{}
       \name{author}{2}{}{%
         {{hash=72760cf91be43b7e1173e52ad2ec220a}{%
